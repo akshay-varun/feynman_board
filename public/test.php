@@ -127,7 +127,6 @@ function multiexplode($delimiters,$string) {
 //    }
 
 $serialized_array = serialize($exploded);
-echo $serialized_array;
 $sql="insert into dashboard (username,topic,percentage,textarea) values ('$user','$topic',$percentage,'$serialized_array')";
 mysqli_query($db, $sql);
 

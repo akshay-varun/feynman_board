@@ -1,5 +1,6 @@
+<?php include('server.php') ?>
 <?php
-session_start();
+
 
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
@@ -25,8 +26,39 @@ if (isset($_GET['logout'])) {
     <?php endif ?>
 </div>
 <p class="logout"> <a href="index.php?logout='1'" style="color: red;">LogOut</a> </p>
-<div >
+<div class="add">
+    <form method="get" action="add.php">
+        <button type="submit">ADD TOPIC</button>
+    </form>
+</div>
+<div>
+</div>
+<br>
+<br>
+<div class="table">
+<span>TOPIC</span> <span class="percentage">PERCENTAGE</span>
+<br>
+<br>
+ <hr>
+<?php
+$username=$_SESSION['username'];
+$query = "SELECT topic,percentage from dashboard where username='$username'";
+$result = mysqli_query($db, $query);
 
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+?>
+
+<tr>
+    <td><span style="padding-right: 80px"><?php echo $row['topic']," : ";?></span></td>
+
+    <td ><span style="padding-left: 80px"><?php echo $row['percentage'],"%"; echo "<br>";echo "<br>";echo "<br>"  ?></span></td>
+    <hr>
+</tr>
+<?php
+    }
+}
+?>
 </div>
 
 

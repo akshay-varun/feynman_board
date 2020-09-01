@@ -49,3 +49,25 @@ form, .content {
     text-decoration: none;
 
 }
+.add>form>button{
+    width: 550px;
+    height: 80px;
+    font-size: 30px;
+}
+
+span{
+    font-size: 30px;
+}
+.table{
+    text-align: center;
+}
+.pos{
+    margin-top: 40px;
+    font-size: 40px;
+}
+.pos1{
+    padding-left: 80px;
+}
+.percentage{
+    padding-left: 80px;
+}
