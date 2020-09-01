@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+
+}
+
+/*.login{*/
+/*   margin: 0 auto;*/
+/*}*/
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: #fe52e6;
+    text-align: center;
+    border: 1px solid #0a0a0a;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+}
+form, .content {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #0a0a0a;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.nav{
+    width: 100%;
+    background: antiquewhite;
+    height: 100px;
+}
+
+.intro{
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    top: 40px;
+}
+.logout>a{
+    position: relative;
+    top: -60px;
+    left: 1600px;
+    font-size: 40px;
+    text-decoration: none;
+
+}
