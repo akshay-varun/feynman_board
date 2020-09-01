@@ -99,7 +99,7 @@ if(isset($_POST["level"]))
         $percentage=($sum/($i*4))*100;
         echo $percentage;
         $_SESSION['percentage']=$percentage;
-
+        header('location: dashboard.php');
     }
     else
         echo "Select an option first !!";
