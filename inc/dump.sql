@@ -6,3 +6,12 @@ CREATE TABLE users(
   id int(11) NOT NULL AUTO_INCREMENT unique key,
   username varchar(100) PRIMARY KEY
 );
+
+CREATE TABLE `dashboard` (
+                             `username` varchar(255) NOT NULL,
+                             `topic` varchar(255) NOT NULL,
+                             `percentage` DECIMAL(25) NOT NULL,
+                             `textarea` LONGTEXT NOT NULL
+);
+
+ALTER TABLE `dashboard` ADD CONSTRAINT `dashboard_fk0` FOREIGN KEY (`username`) REFERENCES `users`(`username`);

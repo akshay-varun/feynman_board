@@ -28,7 +28,7 @@ if (isset($_GET['logout'])) {
 <p class="logout"> <a href="index.php?logout='1'" style="color: red;">LogOut</a> </p>
 <div class="add">
     <form method="get" action="add.php">
-        <button type="submit">ADD TOPIC</button>
+        <button type="submit" style="width: 500px;height: 100px;font-size: 25px">ADD TOPIC</button>
     </form>
 </div>
 <div>
@@ -50,7 +50,7 @@ if ($result->num_rows > 0) {
 ?>
 
 <tr>
-    <td><span style="padding-right: 80px"><?php echo $row['topic']," : ";?></span></td>
+    <td><span style="padding-right: 80px;"><?php echo $row['topic']," : ";?></span></td>
 
     <td ><span style="padding-left: 80px"><?php echo $row['percentage'],"%"; echo "<br>";echo "<br>";echo "<br>"  ?></span></td>
     <hr>

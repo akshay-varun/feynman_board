@@ -66,10 +66,9 @@ if (isset($_POST['login_user'])) {
 
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit1'])) {
 
     $topic=$_POST['topic'];
-    echo $topic;
     $_SESSION['topic'] = $topic;
     $textareaValue = trim($_POST['content']);
     $_SESSION['textareaValue'] =  $textareaValue;

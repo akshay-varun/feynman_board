@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="nav">
-    <h1 style="text-align: center">Add Your Skill</h1>
+    <h1 style="text-align: center;padding-top: 20px">Add Your Skill</h1>
 </div>
 <div class="add">
 <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
@@ -20,7 +20,7 @@
         <textarea rows="10" cols="60" name="content" required></textarea>
     </div>
     <br>
-    <input type="submit" name="submit" value="Submit">
+    <input type="submit" name="submit1" value="Submit">
 </form>
 </div>
 </body>

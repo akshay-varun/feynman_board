@@ -118,17 +118,11 @@ function multiexplode($delimiters,$string) {
         $i++;
     }
     echo "<input type = 'submit' name = 'level' value = Submit> ";
-//    $sql = "insert into textarea_value (textarea_content) values ('" . $textareaValue . "')";
-//    $rs = mysqli_query($db, $sql);
-//    $affectedRows = mysqli_affected_rows($db);
-//
-//    if ($affectedRows == 1) {
-//        $successMsg = "Record has been saved successfully";
-//    }
-
-$serialized_array = serialize($exploded);
-$sql="insert into dashboard (username,topic,percentage,textarea) values ('$user','$topic',$percentage,'$serialized_array')";
-mysqli_query($db, $sql);
+    $serialized_array = serialize($exploded);
+    if (isset($_POST['level'])) {
+        $sql = "insert into dashboard (username,topic,percentage,textarea) values ('$user','$topic',$percentage,'$serialized_array')";
+        mysqli_query($db, $sql);
+    }
 
 ?>
 
